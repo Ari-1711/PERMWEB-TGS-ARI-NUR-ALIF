@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Portal Berita Kampus</title>
+    <link rel="stylesheet" href="Portal Berita Kampus.css">
+    <style>
+        /* CSS tambahan khusus untuk halaman kontak */
+        .contact-container { display: flex; gap: 20px; flex-wrap: wrap; }
+        .contact-info, .contact-form { flex: 1; min-width: 300px; }
+        .contact-info p { margin-bottom: 1.5em; }
+        .contact-info strong { color: var(--primary-color); }
+        .map-container { position: relative; overflow: hidden; padding-top: 75%; /* Rasio 4:3 */ }
+        .map-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 5px; font-family: inherit; }
+        .form-group button { width: 100%; padding: 12px; background-color: var(--primary-color); color: white; border: none; border-radius: 5px; font-size: 1.1em; cursor: pointer; transition: background-color 0.2s; }
+        .form-group button:hover { background-color: var(--secondary-color); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Universitas Indonesia</h1>
+        <nav>
+            <ul>
+                <li><a href="Portal Berita Kampus.html">Beranda</a></li>
+                <li><a href="berita.html">Berita</a></li>
+                <li><a href="acara.html">Acara</a></li>
+                <li><a href="kontak.html" class="active">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main style="flex: 10;"> <article>
+                <h2>Hubungi Kami</h2>
+                <p class="lead-paragraph">Kami senang mendengar dari Anda. Silakan gunakan informasi di bawah ini atau kirimkan pesan melalui formulir kontak.</p>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Informasi Kontak</h3>
+                        <p><strong>Alamat:</strong><br>Jl. Lingkar, Pondok Cina, Kecamatan Beji, Kota Depok, Jawa Barat 16424<br>Kota Cerdas, 12345<br>Indonesia</p>
+                        <p><strong>Email Redaksi:</strong><br><a href="UI@kampus.ac.id">UI@kampus.ac.id</a></p>
+                        <p><strong>Telepon Akademik:</strong><br>(021) 123-4567</p>
+                        
+                        <h3>Lokasi Kami</h3>
+                        <div class="map-container">
+                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126907.95695210791!2d106.7557917027091!3d-6.280336256843312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec1a804e8b85%3A0xd7bf80e1977cea07!2sUniversitas%20Indonesia!5e0!3m2!1sid!2sid!4v1750234254104!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Kirim Pesan</h3>
+                        <form action="#" method="post">
+                            <div class="form-group">
+                                <label for="nama">Nama Lengkap</label>
+                                <input type="text" id="nama" name="nama" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Alamat Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subjek">Subjek</label>
+                                <input type="text" id="subjek" name="subjek" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pesan">Pesan Anda</label>
+                                <textarea id="pesan" name="pesan" rows="6" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit">Kirim Pesan</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Portal Berita Kampus. Hak Cipta Dilindungi.</p>
+        <p>Hubungi Redaksi: <a href="mailto:redaksi@kampus.ac.id">redaksi@kampus.ac.id</a></p>
+    </footer>
+
+</body>
+</html>

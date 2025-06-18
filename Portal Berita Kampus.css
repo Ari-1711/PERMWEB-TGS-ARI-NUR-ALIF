@@ -1,0 +1,209 @@
+/* =================================
+   Variabel & Pengaturan Dasar
+   ================================= */
+:root {
+    --primary-color: #004a7c; /* Biru Tua Korporat */
+    --secondary-color: #007acc; /* Biru Cerah untuk Aksen */
+    --background-light: #f8f9fa; /* Latar Belakang Abu-abu Sangat Muda */
+    --text-color: #333333; /* Abu-abu Tua untuk Teks */
+    --text-light: #6c757d; /* Abu-abu Muda untuk Info Tambahan */
+    --border-color: #dee2e6;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =================================
+   Tipografi
+   ================================= */
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+p {
+    line-height: 1.7;
+    margin: 1em 0;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+/* =================================
+   Struktur & Layout
+   ================================= */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    flex: 1; /* Membuat container mengisi ruang yang tersedia */
+    gap: 20px; /* Jarak antara main dan aside */
+}
+
+header, footer {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    box-shadow: var(--card-shadow);
+}
+
+main {
+    flex: 7; /* Proporsi 70% */
+}
+
+aside {
+    flex: 3; /* Proporsi 30% */
+}
+
+/* =================================
+   Komponen Spesifik
+   ================================= */
+
+/* Header & Navigasi */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    padding: 10px 15px;
+    background-color: var(--background-light);
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Artikel */
+article {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 20px; /* Jarak antar artikel */
+}
+
+article .meta-info {
+    font-size: 0.9em;
+    color: var(--text-light);
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+article .lead-paragraph {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #495057;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* Sidebar */
+aside {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    align-self: flex-start; /* Agar tinggi sidebar sesuai kontennya */
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside li {
+    padding: 10px 0 10px 15px;
+    border-left: 4px solid var(--secondary-color);
+    margin-bottom: 10px;
+    transition: background-color 0.2s;
+}
+
+aside li:hover {
+    background-color: var(--background-light);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: auto; /* Mendorong footer ke bawah */
+    color: var(--text-light);
+    font-size: 0.9em;
+}
+
+/* =================================
+   Responsif (Tampilan Mobile)
+   ================================= */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 10px;
+        gap: 0;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    main, aside {
+        flex: 1; /* Lebar penuh */
+        margin-bottom: 15px;
+    }
+}
